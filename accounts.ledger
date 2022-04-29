@@ -1,0 +1,36 @@
+; assets
+account assets:cash:physical
+account assets:cash:checking
+account assets:cash:checking:budgets:food
+account assets:cash:savings
+account assets:crypto
+account assets:investments:funds:fund1
+account assets:investments:stocks:stock1
+
+; budgets
+account assets:cash:checking:budgets:food
+
+; goals
+account assets:cash:savings:goals:goal1
+
+; expenses
+account expenses:food:restaurants
+account expenses:food:groceries
+
+; revenue
+;; important: only taxable income goes here
+account revenue:Salary
+account revenue:investments
+
+; liabilities
+account liabilities:deposit
+
+; equity
+account equity:Cashback
+account equity:Deposit
+account equity:Refund
+account equity:Transfer
+
+;; converstion
+account equity:conversion:SEK-BTC:SEK
+account equity:conversion:SEK-BTC:BTC

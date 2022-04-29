@@ -1,0 +1,33 @@
+name: Update prices
+
+on:
+  schedule:
+    # every day at 3am
+    - cron: "0 3 * * *"
+
+jobs:
+  update-prices:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.x"
+          architecture: "x64"
+
+      - name: Install pricehist
+        run: |
+          pip install pricehist
+
+      - name: Update prices
+        run: |
+          ./scripts/update-prices.sh
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update prices

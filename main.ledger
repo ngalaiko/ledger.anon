@@ -1,0 +1,11 @@
+include transactions/2018.ledger
+include transactions/2019.ledger
+include transactions/2020.ledger
+include transactions/2021.ledger
+include transactions/2022.ledger
+
+include prices/AAPL.prices.ledger
+include prices/BTCSEK.prices.ledger
+
+include commodities.ledger
+include accounts.ledger
